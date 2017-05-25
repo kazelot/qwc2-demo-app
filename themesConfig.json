@@ -1,126 +1,254 @@
 {
   "themes": {
     "items": [
-      {
-        "url": "https://services.geo.zg.ch/ows/BasisplanSW",
-        "attribution": "Kanton Zug",
-        "attributionUrl": "https://www.zg.ch/behoerden/direktion-des-innern/geoportal",
-        "format": "image/png; mode=8bit",
-        "default": true,
-        "scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
-        "backgroundLayers": [
-          {
-                "name": "pixelkarte",
-                "visibility": true
-              }
-        ],
-        "searchProviders": ["coordinates", "geoadmin"],
-        "mapCrs": "EPSG:2056",
-        "additionalMouseCrs": ["EPSG:21781"],
-        "collapseLayerGroupsBelowLevel": 1
-      },
-      {
-        "url": "http://qwc2.sourcepole.ch/wms/wolfsburg/qwc2_demo",
-        "attribution": "Stadt Wolfsburg",
-        "attributionUrl": "https://geoportal.stadt.wolfsburg.de/",
-        "format": "image/png; mode=8bit",
-        "default": true,
-        "scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
-        "backgroundLayers": [
-          {
-            "name": "mapnik",
-            "printLayer": "osm_farbig",
-            "visibility": true
-          }
-        ],
-        "searchProviders": ["coordinates", "wolfsburg"],
-        "mapCrs": "EPSG:3857",
-        "additionalMouseCrs": ["EPSG:25832"],
-        "collapseLayerGroupsBelowLevel": 1
-      },
-      {
-        "url": "http://qwc2.sourcepole.ch/wms/uster/bauprojekte",
-        "attribution": "Stadt Uster",
-        "attributionUrl": "https://gis.uster.ch/",
-        "scales": [80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
-        "printScales": [80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
-        "printResolutions": [150, 300, 600],
-        "backgroundLayers": [
-          {
-            "name": "mapnik",
-            "visibility": true
-          }
-        ],
-        "searchProviders": ["coordinates", "uster"],
-        "mapCrs": "EPSG:3857",
-        "additionalMouseCrs": ["EPSG:21781", "EPSG:2056"]
-      },
-      {
-        "title": "Public",
-        "url": "https://map.geo.gl.ch/wms/Public",
-        "attribution": "Kanton Glarus",
-        "attributionUrl": "https://map.geo.gl.ch",
-        "tiled": false,
-        "backgroundLayers": [
-          {
-            "name": "pixelkarte",
-            "visibility": true
-          },
-          {
-            "name": "swissimage"
-          }
-        ],
-        "searchProviders": ["coordinates", "glarus"],
-        "mapCrs": "EPSG:2056",
-        "additionalMouseCrs": ["EPSG:21781", "EPSG:2056"],
-        "printLabelForSearchResult": "test",
-        "watermark": {
-            "text": "Watermark Test",
-            "texpadding": "1",
-            "fontsize": "14",
-            "fontfamily": "sans",
-            "fontcolor": "#0000FF",
-            "backgroundcolor": "#FFFFFF",
-            "framecolor": "#000000",
-            "framewidth": 1
-        },
-        "collapseLayerGroupsBelowLevel": 1
-      }
     ],
     "groups": [
-      {
-        "title": "Dev Tests",
+	  {
+        "title": "Plan miasta",
         "items": [
+		  {
+            "title": "Plan miasta",
+			"url": "http://93.175.142.30/wms/public/plan_miasta",
+			"attribution": "Referat MSIP",
+			"attributionUrl": "http://93.175.142.30",
+			"format": "image/png;mode=8bit",
+			"default": true,
+			"scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+			"backgroundLayers": [
+			  {
+				"name": "isok"
+			  },
+			  {
+				"name": "orto2011"
+			  }
+			],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+			"additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+			"collapseLayerGroupsBelowLevel": 1
+		  },
+		  {
+            "title": "Mapa własności",
+			"url": "http://93.175.142.30/wms/public/mapa_wlasnosci",
+			"attribution": "Referat MSIP",
+			"attributionUrl": "http://93.175.142.30",
+			"format": "image/png;mode=8bit",
+			"default": true,
+			"scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+			"backgroundLayers": [
+			  {
+				"name": "isok"
+			  },
+			  {
+				"name": "orto2011"
+			  }
+			],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+			"additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+			"collapseLayerGroupsBelowLevel": 1
+		  },
+		  {
+            "title": "Plan miasta w granicach z okresu 1945 - 1961",
+			"url": "http://93.175.142.30/wms/public/plan_miasta_1945",
+			"attribution": "Referat MSIP",
+			"attributionUrl": "http://93.175.142.30",
+			"format": "image/png;mode=8bit",
+			"default": true,
+			"scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+			"backgroundLayers": [
+			  {
+				"name": "isok"
+			  },
+			  {
+				"name": "orto2011"
+			  }
+			],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+			"additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+			"collapseLayerGroupsBelowLevel": 1
+		  },
+		  {
+            "title": "Plan miasta w granicach z okresu 1961 - 1977",
+			"url": "http://93.175.142.30/wms/public/plan_miasta_1961",
+			"attribution": "Referat MSIP",
+			"attributionUrl": "http://93.175.142.30",
+			"format": "image/png;mode=8bit",
+			"default": true,
+			"scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+			"backgroundLayers": [
+			  {
+				"name": "isok"
+			  },
+			  {
+				"name": "orto2011"
+			  }
+			],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+			"additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+			"collapseLayerGroupsBelowLevel": 1
+		  },
+		  {
+            "title": "Plan miasta w granicach z okresu 1977 - 2001",
+			"url": "http://93.175.142.30/wms/public/plan_miasta_1977",
+			"attribution": "Referat MSIP",
+			"attributionUrl": "http://93.175.142.30",
+			"format": "image/png;mode=8bit",
+			"default": true,
+			"scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+			"backgroundLayers": [
+			  {
+				"name": "isok"
+			  },
+			  {
+				"name": "orto2011"
+			  }
+			],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+			"additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+			"collapseLayerGroupsBelowLevel": 1
+		  }
+		]
+	  },
+      {
+        "title": "Ekofizjografia",
+        "items": [
+		  {
+            "title": "Mapa wysokościowa",
+			"url": "http://93.175.142.30/wms/public/mapa_wysokosciowa",
+			"attribution": "Referat MSIP",
+			"attributionUrl": "http://93.175.142.30",
+			"format": "image/png;mode=8bit",
+			"default": true,
+			"scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+			"backgroundLayers": [
+			  {
+				"name": "isok"
+			  },
+			  {
+				"name": "orto2011"
+			  }
+			],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+			"additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+			"collapseLayerGroupsBelowLevel": 1
+		  },
+		  {
+			"title": "Znormalizowany Numeryczny Model Pokrycia Terenu -ZNMPT (wysokości względne)",
+			"url": "http://93.175.142.30/wms/public/znmpt_wysokosci_wzgledne",
+			"attribution": "Referat MSIP",
+			"attributionUrl": "http://93.175.142.30",
+			"format": "image/png;mode=8bit",
+			"default": true,
+			"scales": [80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+			"printScales": [80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+			"printResolutions": [150, 300, 600],
+			"backgroundLayers": [
+			  {
+				"name": "isok"
+			  },
+			  {
+				"name": "orto2011"
+			  }
+			],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+			"additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+			"collapseLayerGroupsBelowLevel": 1
+		  },
+		  {
+            "title": "Numeryczny Model Pokrycia Terenu - NMPT (wysokości bezwzględne)",
+			"url": "http://93.175.142.30/wms/public/nmpt_wysokosci_bezwzgledne",
+			"attribution": "Referat MSIP",
+			"attributionUrl": "http://93.175.142.30",
+			"format": "image/png;mode=8bit",
+			"default": true,
+			"scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+			"backgroundLayers": [
+			  {
+				"name": "isok"
+			  },
+			  {
+				"name": "orto2011"
+			  }
+			],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+			"additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+			"collapseLayerGroupsBelowLevel": 1
+		  },
+		  {
+            "title": "Mapa spadków terenu",
+			"url": "http://93.175.142.30/wms/public/mapa_spadkow_terenu",
+			"attribution": "Referat MSIP",
+			"attributionUrl": "http://93.175.142.30",
+			"format": "image/png;mode=8bit",
+			"default": true,
+			"scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+			"backgroundLayers": [
+			  {
+				"name": "isok"
+			  },
+			  {
+				"name": "orto2011"
+			  }
+			],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+			"additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+			"collapseLayerGroupsBelowLevel": 1
+		  }
+		]
+	  },
+      {
+        "title": "Planowanie przestrzenne",
+        "items": [
+		  {
+            "title": "Miejscowe plany zagospodarowania przestrzennego",
+			"url": "http://93.175.142.30/wms/public/planowanie_przestrzenne_mpzp",
+			"attribution": "Referat MSIP",
+			"attributionUrl": "http://93.175.142.30",
+			"format": "image/png;mode=8bit",
+			"default": true,
+			"scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+			"backgroundLayers": [
+			  {
+				"name": "isok"
+			  },
+			  {
+				"name": "orto2011"
+			  }
+			],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+			"additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+			"collapseLayerGroupsBelowLevel": 1
+		  },
           {
-            "title": "QWC2 Test",
-            "url": "http://qwc2.sourcepole.ch/wms/themes/test",
-            "attribution": "Demo attribution",
-            "attributionUrl": "https://127.0.0.1/",
-            "tiled": true,
+            "title": "MPZP - przeznaczenie",
+            "url": "http://93.175.142.30/wms/public/planowanie_przestrzenne_mpzp_przeznaczenie",
+            "attribution": "Referat MSIP",
+            "attributionUrl": "http://93.175.142.30/",
+            "tiled": false,
             "backgroundLayers": [
               {
-                "name": "mapnik",
+                "name": "isok",
                 "visibility": true
               },
+			  {
+				"name": "orto2011"
+			  },
               {
-                "name": "Night2012"
-              },
-              {
-                "name": "StamenToner"
-              },
-              {
-                "name": "StamenWatercolor"
-              },
-              {
-                "name": "Gemeindegrenzen"
-              },
-              {
-                "name": "bluemarble"
+                "name": "plan_miasta"
               }
             ],
-            "searchProviders": ["coordinates", "geoadmin", "glarus"],
-            "mapCrs": "EPSG:4326",
-            "additionalMouseCrs": ["EPSG:21781", "EPSG:2056"],
+			"searchProviders": ["gorzow"],
+            "mapCrs": "EPSG:3857",
+            "additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
             "printLabelForSearchResult": "test",
             "watermark": {
               "text": "Watermark Test",
@@ -135,20 +263,26 @@
             "skipEmptyFeatureAttributes": true
           },
           {
-            "title": "QWC2 Test 2056",
-            "url": "http://qwc2.sourcepole.ch/wms/themes/test",
-            "attribution": "Demo attribution",
-            "attributionUrl": "https://127.0.0.1/",
-            "tiled": true,
+            "title": "MPZP - rysunki",
+            "url": "http://93.175.142.30/wms/public/planowanie_przestrzenne_mpzp_rysunki",
+            "attribution": "Referat MSIP",
+            "attributionUrl": "http://93.175.142.30/",
+            "tiled": false,
             "backgroundLayers": [
               {
-                "name": "pixelkarte",
+                "name": "isok",
                 "visibility": true
+              },
+			  {
+				"name": "orto2011"
+			  },
+              {
+                "name": "plan_miasta"
               }
             ],
-            "searchProviders": ["coordinates", "geoadmin", "glarus"],
-            "mapCrs": "EPSG:2056",
-            "additionalMouseCrs": ["EPSG:21781", "EPSG:2056"],
+			"searchProviders": ["gorzow"],
+            "mapCrs": "EPSG:3857",
+            "additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
             "printLabelForSearchResult": "test",
             "watermark": {
               "text": "Watermark Test",
@@ -162,145 +296,550 @@
             },
             "skipEmptyFeatureAttributes": true
           }
-        ],
-        "groups": [
-
+		]
+	  },
+      {
+        "title": "Inwestycje",
+        "items": [
+          {
+            "title": "KSSSE - podstrefa Gorzów Wielkopolski",
+            "url": "http://93.175.142.30/wms/public/strefa_biznesu_kssse_podstrefa_gorzow",
+            "attribution": "Referat MSIP, Wydział Geodezji Urzędu Miasta Gorzowa Wielkopolskiego",
+            "attributionUrl": "http://93.175.142.30",
+            "format": "image/png;mode=8bit",
+            "default": true,
+            "scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+            "backgroundLayers": [
+              {
+                "name": "isok"
+              },
+			  {
+				"name": "orto2011"
+			  }
+            ],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+            "additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+            "collapseLayerGroupsBelowLevel": 1
+          },
+          {
+            "title": "Podstrefa KSSE - oferty inwestycyjne",
+            "url": "http://93.175.142.30/wms/public/strefa_biznesu_oferty_inwestycyjne",
+            "attribution": "Referat MSIP",
+            "attributionUrl": "http://93.175.142.30/",
+            "tiled": false,
+            "backgroundLayers": [
+              {
+                "name": "isok"
+              },
+			  {
+				"name": "orto2011"
+			  },
+              {
+                "name": "plan_miasta"
+              }
+            ],
+			"searchProviders": ["gorzow"],
+            "mapCrs": "EPSG:3857",
+            "additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+            "printLabelForSearchResult": "test",
+            "watermark": {
+              "text": "Watermark Test",
+              "texpadding": "1",
+              "fontsize": "14",
+              "fontfamily": "sans",
+              "fontcolor": "#0000FF",
+              "backgroundcolor": "#FFFFFF",
+              "framecolor": "#000000",
+              "framewidth": 1
+            },
+            "skipEmptyFeatureAttributes": true
+          }
         ]
-      }
+      },
+	  {
+        "title": "DEMOGRAFIA",
+        "items": [
+          {
+            "title": "Analiza demograficzna Gorzowa Wielkopolskiego",
+            "url": "http://93.175.142.30/wms/public/demografia",
+            "attribution": "Referat MSIP",
+            "attributionUrl": "http://93.175.142.30/",
+            "tiled": false,
+            "backgroundLayers": [
+              {
+                "name": "isok"
+              },
+			  {
+				"name": "orto2011"
+			  },
+              {
+                "name": "plan_miasta"
+              }
+            ],
+			"searchProviders": ["gorzow"],
+            "mapCrs": "EPSG:3857",
+            "additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+            "printLabelForSearchResult": "test",
+            "watermark": {
+              "text": "Watermark Test",
+              "texpadding": "1",
+              "fontsize": "14",
+              "fontfamily": "sans",
+              "fontcolor": "#0000FF",
+              "backgroundcolor": "#FFFFFF",
+              "framecolor": "#000000",
+              "framewidth": 1
+            },
+            "skipEmptyFeatureAttributes": true
+          },
+          {
+            "title": "Demografia Gorzowa Wielkopolskiego - [%] udział osób do 24 roku życia wg miejsca zameldowania",
+            "url": "http://93.175.142.30/wms/public/demografia_osoby_do_24_roku",
+            "attribution": "Referat MSIP",
+            "attributionUrl": "http://93.175.142.30/",
+            "tiled": false,
+            "backgroundLayers": [
+              {
+                "name": "isok"
+              },
+			  {
+				"name": "orto2011"
+			  },
+              {
+                "name": "plan_miasta"
+              }
+            ],
+			"searchProviders": ["gorzow"],
+            "mapCrs": "EPSG:3857",
+            "additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+            "printLabelForSearchResult": "test",
+            "watermark": {
+              "text": "Watermark Test",
+              "texpadding": "1",
+              "fontsize": "14",
+              "fontfamily": "sans",
+              "fontcolor": "#0000FF",
+              "backgroundcolor": "#FFFFFF",
+              "framecolor": "#000000",
+              "framewidth": 1
+            },
+            "skipEmptyFeatureAttributes": true
+          },
+          {
+            "title": "Demografia Gorzowa Wielkopolskiego - [%] udział osób pomiędzy 24 a 60 rokiem życia wg miejsca zameldowania",
+            "url": "http://93.175.142.30/wms/public/demografia_osoby_24_60",
+            "attribution": "Referat MSIP",
+            "attributionUrl": "http://93.175.142.30/",
+            "tiled": false,
+            "backgroundLayers": [
+              {
+                "name": "isok"
+              },
+			  {
+				"name": "orto2011"
+			  },
+              {
+                "name": "plan_miasta"
+              }
+            ],
+			"searchProviders": ["gorzow"],
+            "mapCrs": "EPSG:3857",
+            "additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+            "printLabelForSearchResult": "test",
+            "watermark": {
+              "text": "Watermark Test",
+              "texpadding": "1",
+              "fontsize": "14",
+              "fontfamily": "sans",
+              "fontcolor": "#0000FF",
+              "backgroundcolor": "#FFFFFF",
+              "framecolor": "#000000",
+              "framewidth": 1
+            },
+            "skipEmptyFeatureAttributes": true
+          },
+          {
+            "title": "Demografia Gorzowa Wielkopolskiego - [%] udział osób powyżej 60 roku życia wg miejsca zameldowania",
+            "url": "http://93.175.142.30/wms/public/demografia_osoby_powyzej_60_roku",
+            "attribution": "Referat MSIP",
+            "attributionUrl": "http://93.175.142.30/",
+            "tiled": false,
+            "backgroundLayers": [
+              {
+                "name": "isok"
+              },
+			  {
+				"name": "orto2011"
+			  },
+              {
+                "name": "plan_miasta"
+              }
+            ],
+			"searchProviders": ["gorzow"],
+            "mapCrs": "EPSG:3857",
+            "additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+            "printLabelForSearchResult": "test",
+            "watermark": {
+              "text": "Watermark Test",
+              "texpadding": "1",
+              "fontsize": "14",
+              "fontfamily": "sans",
+              "fontcolor": "#0000FF",
+              "backgroundcolor": "#FFFFFF",
+              "framecolor": "#000000",
+              "framewidth": 1
+            },
+            "skipEmptyFeatureAttributes": true
+          }
+		]
+	  },
+	  {
+        "title": "Historia",
+        "items": [
+          {
+            "title": "Mapa zniszczeń wojennych (stan na 1945 r.)",
+            "url": "http://93.175.142.30/wms/public/mapa_zniszczen_wojennych_1945",
+            "attribution": "Referat MSIP, Wydział Geodezji Urzędu Miasta Gorzowa Wielkopolskiego",
+            "attributionUrl": "http://93.175.142.30",
+            "format": "image/png;mode=8bit",
+            "default": true,
+            "scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+            "backgroundLayers": [
+              {
+                "name": "isok"
+              },
+			  {
+				"name": "orto2011"
+			  }
+            ],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+            "additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+            "collapseLayerGroupsBelowLevel": 1
+          },
+          {
+            "title": "Mapa zniszczeń wojennych (stan na 1945 r.) bez zniszczonych budynków",
+            "url": "http://93.175.142.30/wms/public/mapa_zniszczen_wojennych_1945_bez_zniszczonych_budynkow",
+            "attribution": "Referat MSIP, Wydział Geodezji Urzędu Miasta Gorzowa Wielkopolskiego",
+            "attributionUrl": "http://93.175.142.30",
+            "format": "image/png;mode=8bit",
+            "default": true,
+            "scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+            "backgroundLayers": [
+              {
+                "name": "isok",
+                "visibility": true
+              },
+			  {
+				"name": "orto2011"
+			  }
+            ],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+            "additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+            "collapseLayerGroupsBelowLevel": 1
+          },
+          {
+            "title": "Plan miasta 1945 r.",
+            "url": "http://93.175.142.30/wms/public/plan_miasta_landsberg_1945",
+            "attribution": "Referat MSIP, Wydział Geodezji Urzędu Miasta Gorzowa Wielkopolskiego",
+            "attributionUrl": "http://93.175.142.30",
+            "format": "image/png;mode=8bit",
+            "default": true,
+            "scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+            "backgroundLayers": [
+              {
+                "name": "isok",
+                "visibility": true
+              },
+			  {
+				"name": "orto2011"
+			  }
+            ],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+            "additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+            "collapseLayerGroupsBelowLevel": 1
+          },
+          {
+            "title": "Mury obronne",
+            "url": "http://93.175.142.30/wms/public/mury_obronne",
+            "attribution": "Referat MSIP, Wydział Geodezji Urzędu Miasta Gorzowa Wielkopolskiego",
+            "attributionUrl": "http://93.175.142.30",
+            "format": "image/png;mode=8bit",
+            "default": true,
+            "scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+            "backgroundLayers": [
+              {
+                "name": "isok",
+                "visibility": true
+              },
+			  {
+				"name": "orto2011"
+			  }
+            ],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+            "additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+            "collapseLayerGroupsBelowLevel": 1
+          },
+          {
+            "title": "Mapa zabytków",
+            "url": "http://93.175.142.30/wms/public/mapa_zabytkow",
+            "attribution": "Referat MSIP, Wydział Geodezji Urzędu Miasta Gorzowa Wielkopolskiego",
+            "attributionUrl": "http://93.175.142.30",
+            "format": "image/png;mode=8bit",
+            "default": true,
+            "scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+            "backgroundLayers": [
+              {
+                "name": "isok",
+                "visibility": true
+              },
+			  {
+				"name": "orto2011"
+			  }
+            ],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+            "additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+            "collapseLayerGroupsBelowLevel": 1
+          }
+        ]
+      },
+      {
+        "title": "Budżet obywatelski",
+        "items": [
+		  {
+            "title": "Zadania oświatowe",
+			"url": "http://93.175.142.30/maps/public/budzet_obywatelski_edukacja",
+			"attribution": "Referat MSIP",
+			"attributionUrl": "http://93.175.142.30",
+			"format": "image/png;mode=8bit",
+			"default": true,
+			"scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+			"backgroundLayers": [
+			  {
+				"name": "isok"
+			  },
+			  {
+				"name": "orto2011"
+			  }
+			],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+			"additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+			"collapseLayerGroupsBelowLevel": 1
+		  },
+		  {
+            "title": "Obszary budżetu obywatelskiego",
+			"url": "http://93.175.142.30/maps/public/budzet_obywatelski_obszary",
+			"attribution": "Referat MSIP",
+			"attributionUrl": "http://93.175.142.30",
+			"format": "image/png;mode=8bit",
+			"default": true,
+			"scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+			"backgroundLayers": [
+			  {
+				"name": "isok"
+			  },
+			  {
+				"name": "orto2011"
+			  }
+			],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+			"additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+			"collapseLayerGroupsBelowLevel": 1
+		  },
+		  {
+            "title": "Projekty budżetu obywatelskiego",
+			"url": "http://93.175.142.30/maps/public/budzet_obywatelski_obszary",
+			"attribution": "Referat MSIP",
+			"attributionUrl": "http://93.175.142.30",
+			"format": "image/png;mode=8bit",
+			"default": true,
+			"scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+			"backgroundLayers": [
+			  {
+				"name": "isok"
+			  },
+			  {
+				"name": "orto2011"
+			  }
+			],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+			"additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+			"collapseLayerGroupsBelowLevel": 1
+		  }
+        ]
+      },
+      {
+        "title": "Edukacja",
+        "items": [
+		  {
+            "title": "Szkoły podstawowe",
+			"url": "http://93.175.142.30/wms/public/edukacja_szkoly_podstawowe",
+			"attribution": "Referat MSIP",
+			"attributionUrl": "http://93.175.142.30",
+			"format": "image/png;mode=8bit",
+			"default": true,
+			"scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+			"backgroundLayers": [
+			  {
+				"name": "isok"
+			  },
+			  {
+				"name": "orto2011"
+			  }
+			],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+			"additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+			"collapseLayerGroupsBelowLevel": 1
+		  },
+		  {
+            "title": "Gimazja",
+			"url": "http://93.175.142.30/wms/public/edukacja_gimnazja",
+			"attribution": "Referat MSIP",
+			"attributionUrl": "http://93.175.142.30",
+			"format": "image/png;mode=8bit",
+			"default": true,
+			"scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+			"backgroundLayers": [
+			  {
+				"name": "isok"
+			  },
+			  {
+				"name": "orto2011"
+			  }
+			],
+			"searchProviders": ["gorzow"],
+			"mapCrs": "EPSG:3857",
+			"additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+			"collapseLayerGroupsBelowLevel": 1
+		  }
+        ]
+      },
+      {
+        "title": "Inne",
+        "items": [
+		  {
+            "title": "Mapa pochówków",
+			"url": "http://93.175.142.30/wms/public/cmentarz_wyszukiwarka",
+			"attribution": "Referat MSIP",
+			"attributionUrl": "http://93.175.142.30",
+			"format": "image/png;mode=8bit",
+			"default": true,
+			"scales": [200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+			"backgroundLayers": [
+			  {
+				"name": "isok",
+                "visibility": true
+			  },
+			  {
+				"name": "orto2011"
+			  }
+			],
+			"searchProviders": ["cmentarz"],
+			"mapCrs": "EPSG:3857",
+			"additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+			"collapseLayerGroupsBelowLevel": 1
+		  },
+          {
+            "title": "Obszary rewitalizacji",
+            "url": "http://93.175.142.30/wms/public/rewitalizacja_obszary",
+            "attribution": "Referat MSIP",
+            "attributionUrl": "http://93.175.142.30/",
+            "tiled": false,
+            "backgroundLayers": [
+              {
+                "name": "isok",
+                "visibility": true
+              },
+              {
+                "name": "plan_miasta"
+              },
+			  {
+				"name": "orto2011"
+			  }
+            ],
+			"searchProviders": ["gorzow"],
+            "mapCrs": "EPSG:3857",
+            "additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
+            "printLabelForSearchResult": "test",
+            "watermark": {
+              "text": "Watermark Test",
+              "texpadding": "1",
+              "fontsize": "14",
+              "fontfamily": "sans",
+              "fontcolor": "#0000FF",
+              "backgroundcolor": "#FFFFFF",
+              "framecolor": "#000000",
+              "framewidth": 1
+            },
+            "skipEmptyFeatureAttributes": true
+          }
+		]
+	  }
     ],
     "backgroundLayers": [
       {
-        "name": "mapnik",
-        "title": "Open Street Map",
-        "type": "osm",
-        "source": "osm",
-        "thumbnail": "mapnik.jpg",
-        "attribution": "OpenStreetMap contributors",
-        "attributionUrl": "https://www.openstreetmap.org/copyright"
-      },
-      {
-        "name": "Night2012",
-        "title": "NASAGIBS Night 2012",
-        "type": "tileprovider",
-        "source": "nasagibs",
-        "provider": "NASAGIBS.ViirsEarthAtNight2012",
-        "thumbnail": "Night2012.jpg",
-        "attribution": "Suomi NPP / VIIRS via NASA Earth Observatory"
-      },
-      {
-        "name": "StamenWatercolor",
-        "title": "Stamen Watercolor/OSM",
-        "type": "tileprovider",
-        "source": "stamen",
-        "provider": "Stamen.Watercolor"
-      },
-      {
-        "name": "StamenToner",
-        "title": "Stamen Toner/OSM",
-        "type": "tileprovider",
-        "source": "stamen",
-        "provider": "Stamen.Toner"
-      },
-      {
-        "name": "Gemeindegrenzen",
-        "title": "Gemeindegrenzen",
         "type": "wms",
-        "url": "http://wms.geo.admin.ch/",
+        "url": "http://mapy.geoportal.gov.pl/wss/service/img/guest/ORTO/MapServer/WMSServer",
+        "title": "Ortofotomapa 2012 (ISOK)",
+        "name": "isok",
+        "srs": "EPSG:4326",
         "params": {
-          "LAYERS": "ch.swisstopo.swissboundaries3d-gemeinde-flaeche.fill",
-          "STYLES": "default"
-        }
-      },
-      {
-        "type": "wmts",
-        "url": "http://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief/default/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpeg",
-        "title": "Blue Marble",
-        "name": "bluemarble",
-        "tileMatrixPrefix": "",
-        "tileMatrixSet": "GoogleMapsCompatible_Level8",
-        "originX": -20037508.34278925,
-        "originY": 20037508.34278925,
-        "projection:": "EPSG:3857",
-        "resolutions": [
-          156543.03390625,
-          78271.516953125,
-          39135.7584765625,
-          19567.87923828125,
-          9783.939619140625,
-          4891.9698095703125,
-          2445.9849047851562,
-          1222.9924523925781
-        ],
-        "tileSize": [
-          256,
-          256
-        ],
-        "thumbnail": "img/mapthumbs/default.jpg"
-      },
-      {
-        "type": "wmts",
-        "url": "https://www.wmts.nrw.de/geobasis/wmts_nw_dop20/tiles/nw_dop20/{TileMatrixSet}/{TileMatrix}/{TileCol}/{TileRow}.jpeg",
-        "title": "DOP20",
-        "name": "dop20",
-        "tileMatrixPrefix": "",
-        "tileMatrixSet": "EPSG_25832_16",
-        "originX": -46133.17,
-        "originY": 6301219.54,
-        "projection:": "EPSG:25832",
-        "resolutions": [
-          4891.95738465467,
-          2445.97869232734,
-          1222.98934616367,
-          611.494673081834,
-          305.747336540917,
-          152.873668270458,
-          76.4368341352292,
-          38.2184170676146,
-          19.1092085338073,
-          9.55460426690365,
-          4.77730213345183,
-          2.38865106672591,
-          1.19432553336296,
-          0.597162766681478,
-          0.298581383340739,
-          0.14929069167037,
-          0.074645345835184
-        ],
-        "tileSize": [
-          256,
-          256
-        ],
-        "thumbnail": "img/mapthumbs/default.jpg"
-      },
-      {
-        "type": "wms",
-        "url": "https://maps.omniscale.net/v2/swl-33d96aa8/style.default/map",
-        "title": "osm",
-        "name": "osm",
-        "srs": "EPSG:25832",
-        "params": {
-          "LAYERS": "osm",
+          "LAYERS": "Raster",
           "STYLES": "",
           "VERSION": "1.1.1"
         },
         "thumbnail": "img/mapthumbs/default2.jpg"
       },
       {
-        "type": "wmts",
-        "url":"https://wmts20.geo.admin.ch/1.0.0/ch.swisstopo.pixelkarte-farbe/default/current/2056/{TileMatrix}/{TileCol}/{TileRow}.jpeg",
-        "title": "Landeskarte",
-        "name": "pixelkarte",
-        "tileMatrixPrefix": "",
-        "tileMatrixSet": "2056_27",
-        "originX": 2420000.0,
-        "originY": 1350000.0,
-        "projection:": "EPSG:2056",
-        "resolutions": [4000,3750,3500,3250,3000,2750,2500,2250,2000,1750,1500,1250,1000,750,650,500,250,100,50,20,10,5,2.5,2,1.5,1,0.5,0.25],
-        "tileSize": [256, 256],
-        "thumbnail": "img/mapthumbs/default.jpg"
+        "type": "wms",
+        "url": "http://geoportal.wms.gorzow.pl/map/wms/wms.php",
+        "title": "Ortofotomapa 2011",
+        "name": "orto2011",
+        "srs": "EPSG:4326",
+        "params": {
+          "LAYERS": "ortofotomapa2011",
+          "STYLES": "",
+          "VERSION": "1.1.1"
+        },
+        "thumbnail": "img/mapthumbs/default2.jpg"
+      },
+      {
+        "type": "wms",
+        "url": "http://geoportal.wms.gorzow.pl/map/wms/wms.php",
+        "title": "Ortofotomapa 2008",
+        "name": "orto2008",
+        "srs": "EPSG:4326",
+        "params": {
+          "LAYERS": "ortofotomapa2008",
+          "STYLES": "",
+          "VERSION": "1.1.1"
+        },
+        "thumbnail": "img/mapthumbs/default2.jpg"
+      },
+      {
+        "type": "wms",
+        "url": "http://93.175.142.30/wms/public/plan_miasta_wms",
+        "title": "Plan miasta",
+        "name": "plan_miasta",
+        "srs": "EPSG:4326",
+        "params": {
+          "LAYERS": "plan_miasta_wms",
+          "STYLES": "",
+          "VERSION": "1.1.1"
+        },
+        "thumbnail": "img/mapthumbs/default2.jpg"
       }
     ]
   },
-  "defaultScales": [4000000, 2000000, 1000000, 400000, 200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
+  "defaultScales": [1000000, 4000000, 2000000, 1000000, 400000, 200000, 80000, 40000, 20000, 10000, 8000, 6000, 4000, 2000, 1000, 500, 250, 100],
   "defaultPrintGrid": [{"s": 10000, "x": 1000, "y": 1000}, {"s": 1000, "x": 100, "y": 100}, {"s": 100, "x": 10, "y": 10}]
 }

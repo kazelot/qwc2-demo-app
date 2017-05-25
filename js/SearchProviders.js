@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Copyright 2016, Sourcepole AG.
  * All rights reserved.
  *
@@ -324,10 +324,73 @@ function glarusResultGeometry(resultItem, callback) {
     .then(response => callback(resultItem, response.data, "EPSG:2056"));
 }
 
+////////////////////////////////////////////////////////////////////////////////
+
+function cmentarzSearch(text, requestId, searchOptions, dispatch) {
+    let limit = 25;
+    axios.get("http://93.175.142.30/search/pochowki?limit=" + limit + "&query="+ encodeURIComponent(text))
+    .then(response => dispatch(gorzowSearchResults(response.data, requestId, limit, "cmentarz")));
+}
+
+function gorzowSearch(text, requestId, searchOptions, dispatch) {
+    let limit = 9;
+    axios.get("http://93.175.142.30/search/all?limit=" + limit + "&query="+ encodeURIComponent(text))
+    .then(response => dispatch(gorzowSearchResults(response.data, requestId, limit, "gorzow")));
+}
+
+function gorzowMoreResults(moreItem, text, requestId, dispatch) {
+    axios.get("http://93.175.142.30/search/" + moreItem.category + "?query="+ encodeURIComponent(text))
+    .then(response => dispatch(gorzowSearchResults(response.data, requestId, "gorzow")));
+}
+
+function gorzowSearchResults(obj, requestId, limit = -1, provider) {
+	console.log(obj);
+    let results = [];
+    let idcounter = 0;
+    (obj.results || []).map(group => {
+        let groupResult = {
+            id: group.category,
+            title: group.name,
+            items: group.features.map(item => { return {
+                id: item.id,
+                text: item.name,
+                bbox: item.bbox.slice(0),
+                x: 0.5 * (item.bbox[0] + item.bbox[2]),
+                y: 0.5 * (item.bbox[1] + item.bbox[3]),
+                crs: "EPSG:2176",
+                provider: provider,
+                category: group.category
+            }})
+        };
+        if(limit >= 0 && group.features.length > limit) {
+            groupResult.items.push({
+                id: "gorzowmore" + (idcounter++),
+                more: true,
+                provider: "gorzow",
+                category: group.category
+            });
+        }
+        results.push(groupResult);
+    });
+    return addSearchResults({data: results, provider: "gorzow", reqId: requestId}, true);
+}
+
+function gorzowResultGeometry(resultItem, callback) {
+    axios.get("http://93.175.142.30/search/" + resultItem.category + "/geometry?id=" + resultItem.id)
+    .then(response => callback(resultItem, response.data, "EPSG:2176"));
+}
+
 module.exports = {
-    "coordinates": {
-        label: "Coordinates",
-        onSearch: coordinatesSearch
+    "cmentarz": {
+        label: "Cmentarz",
+        onSearch: cmentarzSearch,
+        getResultGeometry: gorzowResultGeometry
+    },
+    "gorzow": {
+        label: "Gorzów Wielkopolski",
+        onSearch: gorzowSearch,
+        getResultGeometry: gorzowResultGeometry,
+        getMoreResults: gorzowMoreResults
     },
     "geoadmin": {
         label: "Swisstopo",

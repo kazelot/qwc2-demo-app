@@ -1,0 +1,116 @@
+﻿{
+  "locale": "pl-PL",
+  "messages": {
+    "appmenu": {
+      "items": {
+        "Draw": "Rysuj",
+        "DxfExport": "Eksportuj do DXF",
+        "Help": "Pomoc",
+        "LayerTree": "Warstwy i legenda",
+        "Measure": "Pomiary",
+        "Print": "Drukuj",
+        "RasterExport": "Eksportuj raster",
+        "Share": "Udostępnij link",
+        "ThemeSwitcher": "Projekt",
+        "Tools": "Narzędzia mapy",
+        "IdentifyRegion": "Identyfikuj obszar"
+      },
+      "menulabel": "Mapy i narzędzia"
+    },
+    "bgswitcher": {
+      "nobg": "Bez podkładu"
+    },
+    "bottombar": {
+      "mousepos_label": "Współrzędne",
+      "scale_label": "Skala",
+      "terms_label": "Warunki użytkowania",
+      "viewertitle_label": "QWC2 Demo"
+    },
+    "draw": {
+      "delete": "Usuń",
+      "clearAll": "Wyczyść wszystko",
+      "point": "Punkt",
+      "line": "Linia",
+      "polygon": "Poligon",
+      "bbox": "BBOX",
+      "circle": "Koło",
+      "strokecolor": "Kolor obramowania",
+      "fillcolor": "Kolor wypełnienia",
+      "text": "Tekst",
+      "strokewidth": "Grubość obramowania",
+      "fillopacity": "Przezroczystość wypełnienia",
+      "fontsize": "Wielkość czcionki"
+    },
+    "dxfexport": {
+      "selectinfo": "Rysuj obszar do eksportu...",
+      "symbologyscale": "Skala symboli:"
+    },
+    "identifyTitle": "Identyfikuj",
+    "identify": {
+      "querying": "Wyszukuję..."
+    },
+    "identifyregion": {
+      "info": "Zaznacz obszar aby pobrać informacje o obiektach..."
+    },
+    "layerinfo": {
+      "title": "Informacje o warstwie",
+      "abstract": "Abstrakt",
+      "attribution": "Atrybuty",
+      "keywords": "Wyrażenia kluczowe",
+      "dataUrl": "Adres URL",
+      "metadataUrl": "Adres URL metadatanych",
+      "legend": "Legenda"
+    },
+    "layertree": {
+      "maptip": "Show layer map tips",
+      "transparency": "Przejrzystość",
+      "printlegend": "Drukuj legendę"
+    },
+    "locate": {
+      "tooltip": "Znajdź mnie",
+      "metersUnit": "metry",
+      "feetUnit": "stopy",
+      "popup": "You are within {distance} {unit} from this point",
+      "outsideMapBoundsMsg": "You seem located outside the boundaries of the map"
+    },
+    "map": {
+      "loading": "Ładowanie..."
+    },
+    "measureComponent": {
+      "areaLabel": "Obszar",
+      "bearingLabel": "Kierunek",
+      "lengthLabel": "Długość",
+      "pointLabel": "Pozycja"
+    },
+    "noFeatureInfo": "Nie znaleziono informacji dla wskazanego punktu",
+    "print": {
+      "layout": "Wygląd:",
+      "nolayouts": "Wybrany szablon nie umożliwia drukowania",
+      "notheme": "Nie wybrano szablonu",
+      "resolution": "Resolution:",
+      "rotation": "Obrót:",
+      "scale": "Skala:",
+      "submit": "Drukuj"
+    },
+    "rasterexport": {
+      "format": "Format:",
+      "selectinfo": "Rysuj prostokąt wokół obszaru, aby go wyeksportować..."
+    },
+    "search": {
+      "coordinates": "Współrzędne",
+      "placeholder": "Znajdź lokalizację lub współrzędne...",
+      "more": "Więcej..."
+    },
+    "share": {
+      "directLinkTitle": "Via a direct link",
+      "generatingpermalink": "Generating permalink...",
+      "msgToCopyUrl": "Click to copy",
+      "msgCopiedUrl": "Copied",
+      "QRCodeLinkTitle": "qr code",
+      "socialIntro": "In your favourite social network"
+    },
+    "themeswitcher": {
+      "filter": "Filter..."
+    }
+  }
+}

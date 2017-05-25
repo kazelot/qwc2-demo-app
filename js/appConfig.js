@@ -14,13 +14,16 @@ const renderHelp = require('./Help');
 Proj4js.defs("EPSG:21781", "+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs");
 Proj4js.defs("EPSG:2056", "+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=2600000 +y_0=1200000 +ellps=bessel +towgs84=674.374,15.056,405.346,0,0,0,0 +units=m +no_defs");
 Proj4js.defs("EPSG:25832", "+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs");
-Proj4js.defs("EPSG:2176", "+proj=tmerc +lat_0=0 +lon_0=15 +k=0.999923 +x_0=5500000 +y_0=0 +ellps=GRS80 +units=m +no_defs"); 
+Proj4js.defs("EPSG:2176", "+proj=tmerc +lat_0=0 +lon_0=15 +k=0.999923 +x_0=5500000 +y_0=0 +ellps=GRS80 +units=m +no_defs");
+Proj4js.defs("EPSG:3857", "+proj=merc +lon_0=0 +k=1 +x_0=0 +y_0=0 +a=6378137 +b=6378137 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs");
+
 
 CoordinatesUtils.setCrsLabels({
     "EPSG:21781": "CH1903 / LV03",
     "EPSG:2056": "CH1903+ / LV95",
     "EPSG:25832": "ETRS89 / UTM 32N",
-    "EPSG:2176": "Poland CS2000 zone 5"
+    "EPSG:2176": "Poland 2000 Strefa 6",
+    "EPSG:3857": "Google"
 });
 
 module.exports = {
@@ -84,11 +87,6 @@ module.exports = {
             code: "de-DE",
             description: "Deutsch",
             localeData: require('react-intl/locale-data/de')
-        },
-        "ro": {
-            code: "ro-RO",
-            description: "Română",
-            localeData: require('react-intl/locale-data/ro')
         },
         "pl": {
             code: "pl-PL",

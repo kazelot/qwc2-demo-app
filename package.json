@@ -2,7 +2,7 @@
     "name": "QWC2App",
     "version": "0.3.0",
     "description": "QGIS Web Client 2 application",
-    "repository": "git@github.com:sourcepole/qwc2-demo-app.git",
+    "repository": "git@github.com:kazelot/qwc2-demo-app.git",
     "main": "index.js",
     "devDependencies": {
         "babel-core": "^6.23.1",

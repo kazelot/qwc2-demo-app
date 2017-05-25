@@ -1,6 +1,6 @@
 {
-  "proxyUrl": "http://qwc2.sourcepole.ch/api/proxy?url=",
-  "qwc2serverUrl": "http://qwc2.sourcepole.ch/api/",
+  "proxyUrl": "http://93.175.142.30/api/proxy?url=",
+  "qwc2serverUrl": "http://93.175.142.30/api/",
   "translationsPath": "/translations",
   "assetsPath": "/assets",
   "urlPositionFormat": "extent",
@@ -159,8 +159,8 @@
         {
           "name": "BottomBar",
           "cfg": {
-            "viewertitleUrl": "http://qgis.org/",
-            "termsUrl":  "http://qgis.org/"
+            "viewertitleUrl": "http://93.175.142.30",
+            "termsUrl":  "http://93.175.142.30/regulamin"
           }
         },
         {
