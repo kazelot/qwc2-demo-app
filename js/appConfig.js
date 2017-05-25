@@ -22,7 +22,7 @@ CoordinatesUtils.setCrsLabels({
     "EPSG:21781": "CH1903 / LV03",
     "EPSG:2056": "CH1903+ / LV95",
     "EPSG:25832": "ETRS89 / UTM 32N",
-    "EPSG:2176": "Poland 2000 Strefa 6",
+    "EPSG:2176": "Poland 2000 Strefa 5",
     "EPSG:3857": "Google"
 });
 
