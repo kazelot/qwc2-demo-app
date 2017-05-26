@@ -613,7 +613,7 @@
         "items": [
 		  {
             "title": "Zadania oświatowe",
-			"url": "http://93.175.142.30/maps/public/budzet_obywatelski_edukacja",
+			"url": "http://93.175.142.30/wms/public/budzet_obywatelski_edukacja",
 			"attribution": "Referat MSIP",
 			"attributionUrl": "http://93.175.142.30",
 			"format": "image/png;mode=8bit",
@@ -634,7 +634,7 @@
 		  },
 		  {
             "title": "Obszary budżetu obywatelskiego",
-			"url": "http://93.175.142.30/maps/public/budzet_obywatelski_obszary",
+			"url": "http://93.175.142.30/wms/public/budzet_obywatelski_obszary",
 			"attribution": "Referat MSIP",
 			"attributionUrl": "http://93.175.142.30",
 			"format": "image/png;mode=8bit",
@@ -655,7 +655,7 @@
 		  },
 		  {
             "title": "Projekty budżetu obywatelskiego",
-			"url": "http://93.175.142.30/maps/public/budzet_obywatelski_obszary",
+			"url": "http://93.175.142.30/wms/public/budzet_obywatelski_obszary",
 			"attribution": "Referat MSIP",
 			"attributionUrl": "http://93.175.142.30",
 			"format": "image/png;mode=8bit",
@@ -762,11 +762,11 @@
               {
                 "name": "plan_miasta"
               },
-			  {
-				"name": "orto2011"
-			  }
+              {
+                "name": "orto2011"
+              }
             ],
-			"searchProviders": ["gorzow"],
+	    "searchProviders": ["gorzow"],
             "mapCrs": "EPSG:3857",
             "additionalMouseCrs": ["EPSG:2176","EPSG:4326"],
             "printLabelForSearchResult": "test",
@@ -782,8 +782,8 @@
             },
             "skipEmptyFeatureAttributes": true
           }
-		]
-	  }
+	]
+      }
     ],
     "backgroundLayers": [
       {
